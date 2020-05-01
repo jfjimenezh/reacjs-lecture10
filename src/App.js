@@ -14,17 +14,23 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p>mi primera aplicacion en react{console.log("hola")}</p>
+        <p>mi primera aplicacion en react {this.state.valor}</p>
         <input type='text' onChange={this.cambio} />
         <br />
-        <button onClick={this.mostrar}>Mostrar</button>
+        <button className='button-show' onClick={this.mostrar}>
+          Mostrar
+        </button>
       </div>
     );
   }
   cambio = (event) => {
-    console.log(this.state.valor); //captura el valor del cambio y lo muestra
+    const newValue = event.target.value;
+    this.setState({ valor: newValue });
+    //console.log(this.state.valor); //captura el valor del cambio y lo muestra
   };
-  mostrar = (event) => {};
+  mostrar = (event) => {
+    console.log(this.state.valor);
+  };
 }
 
 export default App;
