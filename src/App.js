@@ -6,7 +6,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      valor: "valor inicial",
+      suma: "",
+      resta: "",
+      multi: "",
+      divi: "",
     };
     // this.cambio = this.cambio.bind(this); //de esta forma uno el this interno dela funcion con el this
   } //del constructor o documento
@@ -14,22 +17,55 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p>mi primera aplicacion en react {this.state.valor}</p>
-        <input type='text' onChange={this.cambio} />
+        <p>
+          tu resultado es: {this.state.suma}
+          {this.state.resta}
+          {this.state.multi}
+          {this.state.divi}
+        </p>
+        <input type='number' onChange={this.cambio} />
+        <input type='number' onChange={this.cambioUno} />
         <br />
-        <button className='button-show' onClick={this.mostrar}>
-          Mostrar
+        <button className='button-show' onClick={this.suma}>
+          Suma
+        </button>
+        <button className='button-show' onClick={this.resta}>
+          resta
+        </button>
+        <button className='button-show' onClick={this.multi}>
+          multi
+        </button>
+        <button className='button-show' onClick={this.divi}>
+          divi
         </button>
       </div>
     );
   }
   cambio = (event) => {
-    const newValue = event.target.value;
-    this.setState({ valor: newValue });
+    const firstDate = event.target.value;
+    this.setState({ valor1: firstDate });
     //console.log(this.state.valor); //captura el valor del cambio y lo muestra
   };
-  mostrar = (event) => {
-    console.log(this.state.valor);
+  cambioUno = (event) => {
+    const secondate = event.target.value;
+    this.setState({ valor2: secondate });
+  };
+
+  suma = (event) => {
+    let suma = parseFloat(this.state.valor1) + parseFloat(this.state.valor2);
+    this.setState({ suma });
+  };
+  resta = (event) => {
+    let resta = parseFloat(this.state.valor1) - parseFloat(this.state.valor2);
+    this.setState({ resta });
+  };
+  multi = (event) => {
+    let multi = parseFloat(this.state.valor1) * parseFloat(this.state.valor2);
+    this.setState({ multi });
+  };
+  divi = (event) => {
+    let divi = parseFloat(this.state.valor1) / parseFloat(this.state.valor2);
+    this.setState({ divi });
   };
 }
 
