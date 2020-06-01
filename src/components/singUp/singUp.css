@@ -1,0 +1,10 @@
+.mainDiv {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  background-color: cornflowerblue;
+}
+.titulo {
+  color: darkcyan;
+  background-color: black;
+}
