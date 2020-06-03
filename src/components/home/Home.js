@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Home(props) {
-  console.log(props);
   return (
     <div>
       <h1>{"Hola desde la página de inicio :)"}</h1>

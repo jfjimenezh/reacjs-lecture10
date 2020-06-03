@@ -11,7 +11,7 @@ import Home from "../components/home";
 import NotFound from "../components/notFound";
 import SingIn from "../components/singIn";
 import SingUp from "../components/singUp";
-import verUsuarios from "../components/verUsuarios";
+import VerUsuarios from "../components/verUsuarios";
 
 function AppRoutes() {
   return (
@@ -21,7 +21,7 @@ function AppRoutes() {
         <Route exact={true} path='/SingUp' component={SingUp} />
         <Route exact={true} path='/SingIn' component={SingIn} />
         <Route exact={true} path='/notFound' component={NotFound} />
-        <Route exact={true} path='/verUsuarios' component={verUsuarios} />
+        <Route exact={true} path='/verUsuarios' component={VerUsuarios} />
         <Redirect to='/notFound' />
       </Switch>
     </Router>
