@@ -18,6 +18,15 @@ function VerUsuarios(pro) {
         .catch((error) => {});
     }
   });
+  function onclick() {
+    const { history, location } = pro;
+    const { from } = location.state || {
+      from: {
+        pathname: "/",
+      },
+    };
+    history.push(from);
+  }
 
   return (
     <div className='body'>
@@ -57,6 +66,7 @@ function VerUsuarios(pro) {
             variant='contained'
             color='primary'
             className='boton'
+            onClick={onclick}
           >
             Regresar
           </Button>
