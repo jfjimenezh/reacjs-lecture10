@@ -1,12 +1,16 @@
 import React from "react";
-
+import "./home.css";
 import { Link } from "react-router-dom";
 
 function Home(props) {
   return (
     <div>
-      <h1>{"Hola desde la página de inicio :)"}</h1>
-      <ol>
+      <h1 className='titulo'>
+        {
+          "Bienvenido aquí podras registrarte, consultar la  información y modificarla"
+        }
+      </h1>
+      <ol className='links'>
         <li>
           <Link to='/singIn'>{"Click para modificar algun usuario"}</Link>
         </li>

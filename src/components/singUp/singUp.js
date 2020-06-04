@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function SingUp() {
+function SingUp(props) {
   const [textName, setTextName] = useState("");
   const [textLastName, setTextLastName] = useState("");
   const [textEdad, setTextEdad] = useState("");
@@ -36,6 +36,13 @@ function SingUp() {
       pass: textPass,
       Repeatpass: textRepeatpass,
     });
+    const { history, location } = props;
+    const { from } = location.state || {
+      from: {
+        pathname: "/",
+      },
+    };
+    history.push(from);
   };
 
   const onChangeName = (event) => {

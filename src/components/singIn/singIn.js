@@ -1,7 +1,7 @@
 import React from "react";
 
 function singIn() {
-  return <div>los usuarios creados son los siguientes:</div>;
+  return <div>Aqui podra modificar los datos de cualquier usuario</div>;
 }
 
 export default singIn;
