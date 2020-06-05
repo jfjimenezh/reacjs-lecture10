@@ -1,13 +1,28 @@
 .mainDiv {
-  width: 50%;
-  text-align: center;
+  background-image: url('../../imagenes/cielo.jpg');
 }
 .titulo {
   text-align: center;
-  color: beige;
+  color: white;
   background-color: black;
 }
 .links {
+  text-align: center;
   margin: auto;
   color: blue;
+  background-color: #ff00ff;
+}
+
+.letra {
+  text-align: justify;
+  margin: auto;
+  color: blue;
+  font-family: cursive;
+  font-size: xx-large;
+}
+.p {
+  font-weight: 1000;
+}
+.pa {
+  font-weight: 700;
 }

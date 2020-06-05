@@ -30,18 +30,17 @@ function VerUsuarios(pro) {
 
   return (
     <div className='body'>
-      <h1 className='titulo'>Listado de Usuarios Registrados</h1>
-      <br></br>
-      <br></br>
+      <h1 className='titulo'>{"Listado de Usuarios Registrados"}</h1>
+      <br />
 
       <table className='tabla'>
-        <thead className='encabezados'>
-          <tr>
-            <th className='th'>ID</th>
-            <th className='th'>Nombre</th>
-            <th className='th'>Apellido</th>
-            <th className='th'>Edad</th>
-            <th className='th'>Correo</th>
+        <thead>
+          <tr className='th'>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Correo</th>
           </tr>
         </thead>
         <tbody>
@@ -58,20 +57,9 @@ function VerUsuarios(pro) {
               ))}
         </tbody>
       </table>
-      <br></br>
-      <div>
-        <form>
-          <Button
-            type='submit'
-            variant='contained'
-            color='primary'
-            className='boton'
-            onClick={onclick}
-          >
-            Regresar
-          </Button>
-        </form>
-      </div>
+      <Button type='submit' variant='contained' color='primary' className='boton' onClick={onclick}>
+        Regresar
+      </Button> 
     </div>
   );
 }

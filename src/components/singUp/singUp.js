@@ -45,6 +45,15 @@ function SingUp(props) {
     history.push(from);
   };
 
+  function onclick() {
+    const { history, location } = props;
+    const { from } = location.state || {
+      from: {
+        pathname: "/",
+      },
+    };
+    history.push(from);
+  }
   const onChangeName = (event) => {
     setTextName(event.target.value);
   };
@@ -114,7 +123,7 @@ function SingUp(props) {
           type='password'
           className={clasess.root}
           id='pass'
-          label='pass'
+          label='contraseña'
           variant='outlined'
           onChange={onChangePass}
           required='true'
@@ -126,7 +135,7 @@ function SingUp(props) {
           type='password'
           className={clasess.root}
           id='Repeatpass'
-          label='Repeatpass'
+          label='Repetircontraseña'
           variant='outlined'
           onChange={onChangeRepeatpass}
           required='true'
@@ -134,9 +143,11 @@ function SingUp(props) {
           inputmode='number'
         />
         <br />
-
         <Button type='submit' variant='contained' color='primary'>
           Enviar
+        </Button>
+        <Button type='submit' variant='contained' color='primary' onClick={onclick}>
+          regresar
         </Button>
       </form>
     </div>
