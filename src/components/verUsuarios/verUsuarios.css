@@ -1,14 +1,17 @@
+.body {
+  background-image: url('../../imagenes/cielo.jpg');
+}
+
 .tabla {
-  background-color: cadetblue;
+  background-color: #ff00ff;
   width: 80%;
-  border: 1px solid #000;
   margin: auto;
 }
 
 .th {
   width: 25%;
   text-align: center;
-  border: 1px solid #000;
+  border: 10px solid #000;
   border-spacing: 0;
   background-color: black;
   color: aliceblue;
@@ -17,19 +20,19 @@
 .td {
   width: 25%;
   text-align: center;
-  border: 1px solid #000;
+  border: 10px solid #000;
   border-spacing: 0;
   padding: 0.3em;
   caption-side: bottom;
 }
-.boton {
-  align-items: center;
-  align-content: center;
-  margin-bottom: left;
-  margin: auto;
-}
 .titulo {
   text-align: center;
-  color: azure;
+  color: white;
   background-color: black;
 }
+.boton {
+  text-align: center;
+  width: auto;
+}
+
+
