@@ -1,5 +1,5 @@
 import "./singUp.css";
-import React, { useState } from "react";
+import React, {useState } from "react";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
@@ -8,7 +8,7 @@ import TextField from "@material-ui/core/TextField";
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: "10px",
-    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    background: "linear-gradient(45deg, #FFFFFF 30%, #51d1f6 90%)",
   },
 }));
 
@@ -61,7 +61,7 @@ function SingUp(props) {
   const onChangeLastName = (event) => {
     setTextLastName(event.target.value);
   };
-  const onChangeEdad = (event) => {
+  const onChangeEdad = (event) => { 
     setTextEdad(event.target.value);
   };
   const onChangeEmail = (event) => {
@@ -135,7 +135,7 @@ function SingUp(props) {
           type='password'
           className={clasess.root}
           id='Repeatpass'
-          label='Repetircontraseña'
+          label='Repetir la contraseña'
           variant='outlined'
           onChange={onChangeRepeatpass}
           required='true'
@@ -143,14 +143,20 @@ function SingUp(props) {
           inputmode='number'
         />
         <br />
-        <Button type='submit' variant='contained' color='primary'>
+        <br />
+        <Button type='submit' variant='contained'
+        style={{backgroundColor:'#51d1f6',marginRight: 20}}>
           Enviar
         </Button>
-        <Button type='submit' variant='contained' color='primary' onClick={onclick}>
+        <Button type='submit' variant='contained'
+        onClick={onclick}
+        style={{backgroundColor:'#51d1f6',}}>
           regresar
         </Button>
+        <br />
+        <br />
       </form>
-    </div>
+    </div> 
   );
 }
 
