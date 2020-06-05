@@ -1,7 +1,8 @@
+import "./verUsuarios.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./verUsuarios.css";
-import { Button } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
+
 
 function VerUsuarios(pro) {
   const [datos, setdatos] = useState(null);
@@ -29,7 +30,7 @@ function VerUsuarios(pro) {
   }
 
   return (
-    <div className='body'>
+    <div className='mainDiv'>
       <h1 className='titulo'>{"Listado de Usuarios Registrados"}</h1>
       <br />
 
@@ -57,9 +58,16 @@ function VerUsuarios(pro) {
               ))}
         </tbody>
       </table>
-      <Button type='submit' variant='contained' color='primary' className='boton' onClick={onclick}>
+      <br/>
+      <br/>
+      <Button type='submit' variant='contained' onClick={onclick} 
+      style={{backgroundColor:'#51d1f6'}}>
         Regresar
       </Button> 
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
   );
 }

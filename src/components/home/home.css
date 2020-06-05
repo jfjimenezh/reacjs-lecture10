@@ -5,18 +5,12 @@
   text-align: center;
   color: white;
   background-color: black;
-}
-.links {
-  text-align: center;
-  margin: auto;
-  color: blue;
-  background-color: #ff00ff;
-}
+} 
 
 .letra {
   text-align: justify;
   margin: auto;
-  color: blue;
+  color: #5731CD;
   font-family: cursive;
   font-size: xx-large;
 }

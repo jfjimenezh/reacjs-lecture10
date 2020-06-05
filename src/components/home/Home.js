@@ -1,13 +1,23 @@
 import React from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    marginLeft: '300px',
+    background: "linear-gradient(45deg, #FFFFFF 30%, #51d1f6 90%)",
+  },
+}));
+
 
 function Home(props) {
+  const clasess = useStyles();
   return (
-    <div className='mainDiv'>
+    <div className='mainDiv' alignSelf='stretch'>
       <h1 className='titulo'>{"Bienvenido aquí podras registrarte, consultar la  información y modificarla"}</h1>
       <br />
-      <table className='links'>
+      <table className={clasess.root}>
         <li className='letra'>
           <Link to='/singIn'>{"Click para modificar algun usuario"}</Link>
         </li>
@@ -59,6 +69,7 @@ function Home(props) {
           "BACK: https://github.com/jfjimenezh/backend"
         }
       </p>
+      <br /> 
     </div>
   );
 }

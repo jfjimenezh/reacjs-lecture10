@@ -1,9 +1,12 @@
-.body {
-  background-image: url('../../imagenes/cielo.jpg');
+.mainDiv {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  background-color: #51d1f6;
 }
 
 .tabla {
-  background-color: #ff00ff;
+  background-color: white;
   width: 80%;
   margin: auto;
 }
@@ -20,7 +23,7 @@
 .td {
   width: 25%;
   text-align: center;
-  border: 10px solid #000;
+  border: 10px solid #51d1f6;
   border-spacing: 0;
   padding: 0.3em;
   caption-side: bottom;
@@ -29,10 +32,6 @@
   text-align: center;
   color: white;
   background-color: black;
-}
-.boton {
-  text-align: center;
-  width: auto;
 }
 
 
