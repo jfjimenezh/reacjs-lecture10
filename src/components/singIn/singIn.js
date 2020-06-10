@@ -2,12 +2,9 @@ import "./singIn.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
-import EditIcon from '@material-ui/icons/Edit';
+import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
-
-
-
-
+import EditIcon from '@material-ui/icons/Edit';
 
 function VerUsuarios(pro) {
   const [datos, setdatos] = useState(null);
@@ -69,6 +66,9 @@ function VerUsuarios(pro) {
                   <td className='td'>{val.edad}</td>
                   <td className='td'>{val.correo}</td>
                   <td className='td'>{val.modificar}
+                  <IconButton aria-label="modificar" ><EditIcon /></IconButton></td>  
+                  <td className='td'>{val.eliminar}
+                  <IconButton  aria-label="delete"><DeleteIcon /></IconButton></td>
                   <EditIcon>  </EditIcon></td>
                   <td className='td'>{val.eliminar}
                   <DeleteIcon>Eliminar</DeleteIcon>
@@ -90,8 +90,4 @@ function VerUsuarios(pro) {
     </div>
   );
 }
-
-
 export default VerUsuarios;
-
-//---------------------------------------------------------
