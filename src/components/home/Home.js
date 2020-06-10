@@ -41,17 +41,17 @@ function Home(props) {
       </p>
       <p className='pa'>
         {
-          "Andrea Ariza asarizaa@libertadores.edu.co"
+          "Andrea Ariza; asarizaa@libertadores.edu.co"
         }
       </p>
       <p className='pa'>
         {
-          "David Mena demenag@libertadores.edu.co"
+          "David Mena;   demenag@libertadores.edu.co"
         }
       </p>
       <p className='pa'>
         {
-          "Jason Jimenez jfjimenezh@libertadores.edu.co"
+          "Jason Jimenez;   jfjimenezh@libertadores.edu.co"
         }
       </p>
       <p className='p'>
