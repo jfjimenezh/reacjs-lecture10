@@ -1,7 +1,9 @@
 import "./verUsuarios.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
+   
+
 
 
 function VerUsuarios(pro) {
@@ -28,13 +30,16 @@ function VerUsuarios(pro) {
     };
     history.push(from);
   }
-
+  
   return (
     <div className='mainDiv'>
       <h1 className='titulo'>{"Listado de Usuarios Registrados"}</h1>
       <br />
+       
 
       <table className='tabla'>
+       
+
         <thead>
           <tr className='th'>
             <th>ID</th>
@@ -71,6 +76,7 @@ function VerUsuarios(pro) {
     </div>
   );
 }
+
 
 export default VerUsuarios;
 
