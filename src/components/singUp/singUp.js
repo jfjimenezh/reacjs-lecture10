@@ -74,11 +74,14 @@ function SingUp(props) {
   const onChangeRepeatpass = (event) => {
     setTextRepeatpass(event.target.value);
   };
+  
+  
 
   return (
     <div className='mainDiv'>
       <h1 className='titulo'> Porfavor registre sus datos</h1>
       <form onSubmit={onSubmit} className='formulario'>
+     
         <TextField
           type='text'
           className={clasess.root}
