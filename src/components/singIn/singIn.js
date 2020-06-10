@@ -6,6 +6,9 @@ import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 
+
+
+
 function VerUsuarios(pro) {
   const [datos, setdatos] = useState(null);
   const [statusFlag, setStatusFlag] = useState(false);
@@ -66,13 +69,9 @@ function VerUsuarios(pro) {
                   <td className='td'>{val.edad}</td>
                   <td className='td'>{val.correo}</td>
                   <td className='td'>{val.modificar}
-                  <IconButton aria-label="modificar" ><EditIcon /></IconButton></td>  
+                  <IconButton aria-label="modificar"><EditIcon /></IconButton></td>  
                   <td className='td'>{val.eliminar}
-                  <IconButton  aria-label="delete"><DeleteIcon /></IconButton></td>
-                  <EditIcon>  </EditIcon></td>
-                  <td className='td'>{val.eliminar}
-                  <DeleteIcon>Eliminar</DeleteIcon>
-                  </td>
+                  <IconButton aria-label="delete"><DeleteIcon /></IconButton></td>
                 </tr>
               ))}
         </tbody>
@@ -90,4 +89,6 @@ function VerUsuarios(pro) {
     </div>
   );
 }
+
+
 export default VerUsuarios;
