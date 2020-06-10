@@ -5,14 +5,18 @@ import Button from "@material-ui/core/Button";
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-import CheckIcon from '@material-ui/icons/Check';
+
 
 
 
 function VerUsuarios(pro) {
   const [datos, setdatos] = useState(null);
   const [statusFlag, setStatusFlag] = useState(false);
-
+  
+  
+  
+  
+  
   useEffect(() => {
     if (!statusFlag) {
       axios
@@ -33,13 +37,16 @@ function VerUsuarios(pro) {
     };
     history.push(from);
   }
-   
+  
+
   return (
     <div className='mainDiv'>
       <h1 className='titulo'>{"Seleccione el usuario que desea modificar o eliminar"}</h1>
       <br />
 
       <table className='tabla'>
+       
+       
         <thead>
           <tr className='th'>
             <th>ID</th>
@@ -47,6 +54,8 @@ function VerUsuarios(pro) {
             <th>Apellido</th>
             <th>Edad</th>
             <th>Correo</th>
+            <th>Modificar</th>
+            <th>Eliminar</th>
           </tr>
         </thead>
         <tbody>
@@ -54,13 +63,14 @@ function VerUsuarios(pro) {
             ? null
             : datos.data.map((val) => (
                 <tr key={val.userid}>
-                   
+                  <td className='td'>{val.userid}</td>
                   <td className='td'>{val.nombre}</td>
                   <td className='td'>{val.apellido}</td>
                   <td className='td'>{val.edad}</td>
                   <td className='td'>{val.correo}</td>
                   <td className='td'>{val.modificar}
-                   <CheckIcon/>   <EditIcon/>
+                  <EditIcon>  </EditIcon></td>
+                  <td className='td'>{val.eliminar}
                   <DeleteIcon>Eliminar</DeleteIcon>
                   </td>
                 </tr>
